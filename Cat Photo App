@@ -1,0 +1,88 @@
+
+<!-- HTML elements have a basic <opentag>"Content"</closetag> syntax -->
+<!-- Main element is used to represent the main content of the body of an HTMl document-->
+ <main>
+     <h1>CatPhotoApp</h1>
+       <!-- H are headings, these prioritze in acending order 1->2->3 (1 being most important, 2 being 2nd most, etc)-->
+      <!-- Section Title is used to seperate content-->
+     <section>
+      <h2>Cat Photos</h2>
+        <!-- "P" elements are paragraphs-->
+          <!-- Turning texts into a hyper link: {<a href="Www.com">Hyper link text></a>} -->
+          <!--"target" attribute specifies where to open the linked document.-->
+            <!--target="_blank" opens the linked document in a new tab/window-->
+      <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+        <!-- you can link to anothe page with the anchor (a) element-->
+          <!-- Links text must be placed in between the oeping and closing tags-->
+        <!-- THIS WAS DELETED<a href="https://freecatphotoapp.com">link to cat pictures</a> -->
+        <!-- img element should not have a closing tag. only one img element: IS NOT <img></img>-->
+          <!-- all "img src=" elements contain an ALT attribute -->
+           <!--imges can also be converted into links by an "<a href=" attribute-->
+        <a href="https://freecatphotoapp.com">
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back">
+        </a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <!--"ul" is used to create lists-->
+        <ul>
+         <!--"li" are individual listed items-->
+         <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <!--figure represents self containted content, allows you to associate an image with a caption-->
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <!--a fig caption allows you to add a caption bellow the image-->
+           <!-- to emphasis a word use "em" closing and ending tag applied-->
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <!--"ol" can be used for Ordering lists-->
+        <ol>
+          <!--reuse the "li" element-->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <!--reusing the "src" atahce an image-->
+           <!--useing the "alt" function add a caption onto thr imagr-->
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field">
+          <!-- The "strong" is equivelent to BOLD comand, open and closed tags-->
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <!-- "Form" creates a form-->
+         <!-- The "action" attrivute indicates where form data should be sent to-->
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+        <!-- "inpouts" allow you several ways to collect data from a web for-->
+         <!-- use "type" to select which input you would like-->
+          <!-- Kinds of Types="radio, text, submit"-->
+           <!--"label" are used to help associate the text for an input (helps assistive technologies like screen readers)-->
+            <!--"id"s are used to identify specific HTML elements. IDS MUST BE UNIQUE FROM ALL OTHER ID VAlUES-->
+             <!-- If Display is selected the form data for the buttom is based on its name and value attributes-->
+          <fieldset>
+            <!--A legend is what text is displayed about the form)-->
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input type="radio" id="indoor" value="indoor" name="indoor-outdoor"> Indoor</label>
+            <label><input type="radio" id="outdoor" Value="outdoor" name="indoor-outdoor"> Outdoor </label>
+             <!--"required" doesnt require tags, makes this form field required-->
+              <!-- A "name" must be given for each text field, name="value"-->
+               <!-- "Placeholders" are used to give people hints of what to fillout in the forum field-->
+            <input type="text" placeholder="cat photo url" name="catphotourl" required>
+            <!--The "button" field add a button while >TEXT< is shown to the user-->
+            <button type="submit">Submit</button>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <!-- "Check" boxes are used for questions that may have more than one answer-->
+            <input type="checkbox" id="loving"> Loving
+          </fieldset>
+        </form>
+      </section>
+ </main>
